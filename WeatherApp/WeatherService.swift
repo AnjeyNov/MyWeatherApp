@@ -27,7 +27,18 @@ class WeatherService {
     }
         
     private func fetchWeatherFor(_ location: Location) {
-        print(location)
+        
     }
 }
 
+fileprivate extension String {
+    static var baseURLString: String { "https://api.open-meteo.com/" }
+    static var getWeatherEndPoint: String { "v1/forecast" }
+    static var latitude: String { "latitude" }
+    static var longitude: String { "longitude" }
+    static var hourly: String { "hourly" }
+    static var temperature_2m: String { "temperature_2m" }
+    static var weathercode: String { "weathercode" }
+    static var currentWeather: String { "current_weather" }
+    static var timezone: String { "timezone" }
+}
