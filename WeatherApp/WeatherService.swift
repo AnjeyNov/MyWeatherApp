@@ -6,16 +6,23 @@
 //
 
 import Combine
-import Foundation
+import CoreLocation
 
 class WeatherService {
     
     static let shared = WeatherService()
+
     
-    
-    private init() { }
+    private init() {
+
+    }
     
     func fetchWeatherForCurrentLocation() {
         
     }
+    
+    private func getCurrentLocation() {
+        
+    }
 }
+

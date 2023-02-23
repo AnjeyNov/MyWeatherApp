@@ -7,10 +7,11 @@
 
 import UIKit
 import CoreLocation
+import Combine
 
 class FirstTutorialScreenViewController: UIViewController {
     private let viewModel: FirstTutorialScreenViewModel
-    private let locationManager = CLLocationManager()
+    private var cancellables: Set<AnyCancellable> = []
 
     @IBOutlet weak var mainButton: UIButton!
 
@@ -27,40 +28,41 @@ class FirstTutorialScreenViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.backButtonTitle = ""
         mainButton.isEnabled = false
-        locationManager.delegate = self
-        switch locationManager.authorizationStatus {
-        case .denied:
-            presentAlert()
-        default:
-            locationManager.requestAlwaysAuthorization()
-        }
+
+        LocationService
+            .shared
+            .authorizationStatus
+            .receive(on: DispatchQueue.main)
+            .map { $0 == .authorizedAlways || $0 == .authorizedWhenInUse }
+            .sink { [unowned self] in mainButton.isEnabled = $0 }
+            .store(in: &cancellables)
     }
 
     @IBAction func mainButtonAction() {
         viewModel.goNext()
     }
     
-    private func presentAlert() {
-        let alert = UIAlertController(title: .alertTitle, message: .alertMessage, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: .ok, style: .default))
-        present(alert, animated: true)
-    }
+//    private func presentAlert() {
+//        let alert = UIAlertController(title: .alertTitle, message: .alertMessage, preferredStyle: .alert)
+//        alert.addAction(UIAlertAction(title: .ok, style: .default))
+//        present(alert, animated: true)
+//    }
 }
 
-extension FirstTutorialScreenViewController: CLLocationManagerDelegate {
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        switch status {
-        case .authorizedAlways, .authorizedWhenInUse:
-            mainButton.isEnabled = true
-            viewModel.fetchWeather()
-        case .denied:
-            mainButton.isEnabled = false
-            presentAlert()
-        default:
-            mainButton.isEnabled = false
-        }
-    }
-}
+//extension FirstTutorialScreenViewController: CLLocationManagerDelegate {
+//    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+//        switch manager.authorizationStatus {
+//        case .authorizedAlways, .authorizedWhenInUse:
+//            mainButton.isEnabled = true
+//            viewModel.fetchWeather()
+//        case .denied:
+//            mainButton.isEnabled = false
+//            presentAlert()
+//        default:
+//            mainButton.isEnabled = false
+//        }
+//    }
+//}
 
 fileprivate extension String {
     static var alertTitle: String { "Geolocation services must be enabled." }

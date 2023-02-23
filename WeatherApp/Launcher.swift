@@ -29,5 +29,11 @@ class Launcher {
            topController = presentedViewController
        }
        topController.present(vc, animated: false)
-   }
+    }
+    
+    func presentAlert(_ title: String, _ message: String, buttonText: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: buttonText, style: .default))
+        present(alert)
+    }
 }
