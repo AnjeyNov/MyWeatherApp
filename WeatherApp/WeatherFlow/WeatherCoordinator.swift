@@ -31,6 +31,15 @@ class WeatherCoordinator: CoordinatorDependable {
                 presentAlert()
             }
             .store(in: &cancellables)
+        
+        WeatherService
+            .shared
+            .weatherData
+            .receive(on: DispatchQueue.main)
+            .sink { [unowned self] in
+                print($0)
+            }
+            .store(in: &cancellables)
     }
     
     func start() {

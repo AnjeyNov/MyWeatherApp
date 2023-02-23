@@ -5,10 +5,10 @@
 //  Created by Andrzej Nowitski on 23/02/2023.
 //
 
-import Foundation
+import CoreLocation
 
-struct Location {
+struct Location: Equatable {
     let city: String
-    let latitude: Float
-    let longitude: Float
+    let latitude: CLLocationDegrees
+    let longitude: CLLocationDegrees
 }

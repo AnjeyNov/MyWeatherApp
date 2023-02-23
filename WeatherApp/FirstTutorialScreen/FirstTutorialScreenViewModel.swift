@@ -18,10 +18,6 @@ struct FirstTutorialScreenViewModel {
         self.router = router
     }
     
-    func fetchWeather() {
-        WeatherService.shared.fetchWeatherForCurrentLocation()
-    }
-    
     func goNext() {
         router.endFirstTutorial()
     }

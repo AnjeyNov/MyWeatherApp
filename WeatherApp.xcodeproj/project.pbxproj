@@ -26,6 +26,7 @@
 		C453E72B29A7E88500476563 /* LoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C453E72929A7E88500476563 /* LoadingViewController.xib */; };
 		C453E72E29A7F17900476563 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C453E72D29A7F17900476563 /* LocationModel.swift */; };
 		C453E73029A7F93000476563 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C453E72F29A7F93000476563 /* LocationService.swift */; };
+		C453E73229A8105E00476563 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C453E73129A8105E00476563 /* WeatherData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		C453E72929A7E88500476563 /* LoadingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingViewController.xib; sourceTree = "<group>"; };
 		C453E72D29A7F17900476563 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
 		C453E72F29A7F93000476563 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		C453E73129A8105E00476563 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				C453E71229A68F1000476563 /* WeatherService.swift */,
 				C453E72D29A7F17900476563 /* LocationModel.swift */,
 				C453E72F29A7F93000476563 /* LocationService.swift */,
+				C453E73129A8105E00476563 /* WeatherData.swift */,
 			);
 			path = WeatherApp;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C453E73029A7F93000476563 /* LocationService.swift in Sources */,
+				C453E73229A8105E00476563 /* WeatherData.swift in Sources */,
 				C453E71329A68F1000476563 /* WeatherService.swift in Sources */,
 				C4180A5F29A675FB00515200 /* AppCoordinator.swift in Sources */,
 				C453E72229A7D2A900476563 /* CoordinatorDependable.swift in Sources */,
@@ -360,6 +364,9 @@
 				INFOPLIST_FILE = WeatherApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = MyWeather;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.weather";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need access to your location to show the weather in your city.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We need access to your location to show the weather in your city.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need access to your location to show the weather in your city.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -392,6 +399,9 @@
 				INFOPLIST_FILE = WeatherApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = MyWeather;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.weather";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need access to your location to show the weather in your city.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We need access to your location to show the weather in your city.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need access to your location to show the weather in your city.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
