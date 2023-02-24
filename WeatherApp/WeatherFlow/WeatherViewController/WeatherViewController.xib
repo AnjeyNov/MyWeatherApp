@@ -138,7 +138,7 @@
                                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="xwV-tI-nj4">
                                                             <rect key="frame" x="0.0" y="0.0" width="393" height="71"/>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vZj-1O-fwu">
+                                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vZj-1O-fwu">
                                                                 <size key="itemSize" width="128" height="128"/>
                                                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -161,7 +161,7 @@
                                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="lBn-Ts-rPZ">
                                                             <rect key="frame" x="15" y="0.0" width="363" height="329.33333333333331"/>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                            <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tJD-wU-v87">
+                                                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tJD-wU-v87">
                                                                 <size key="itemSize" width="128" height="128"/>
                                                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -201,6 +201,7 @@
                 <constraint firstItem="rly-Ah-QZ0" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" id="N5Y-VK-bKC"/>
                 <constraint firstItem="rly-Ah-QZ0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="PEa-ZP-Tsf"/>
                 <constraint firstItem="rly-Ah-QZ0" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="aAh-Am-0V9"/>
+                <constraint firstItem="lBn-Ts-rPZ" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="hZg-6m-MEa"/>
             </constraints>
             <point key="canvasLocation" x="130.53435114503816" y="-11.267605633802818"/>
         </view>

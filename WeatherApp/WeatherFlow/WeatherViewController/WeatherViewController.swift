@@ -59,7 +59,7 @@ class WeatherViewController: UIViewController {
 }
 
 
-extension WeatherViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+extension WeatherViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         1
     }
@@ -87,6 +87,19 @@ extension WeatherViewController: UICollectionViewDataSource, UICollectionViewDel
             return cell
         }
     }
+    
+    func collectionView(
+        _ collectionView: UICollectionView,
+        layout collectionViewLayout: UICollectionViewLayout,
+        sizeForItemAt indexPath: IndexPath
+    ) -> CGSize {
+        if collectionView === dailyCollectionView {
+            return CGSize(width: collectionView.frame.size.width - 30, height: 24)
+        } else {
+            return CGSize(width: 38, height: 72)
+        }
+    }
+
 }
 
 fileprivate extension String {

@@ -35,17 +35,4 @@ class DailyCollectionViewCell: UICollectionViewCell {
         dayLabel.text = dailyWeather.dayOfWeek
         weatherImageView.image = dailyWeather.weathercode.largeImage
     }
-    
-//    override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
-//            setNeedsLayout()
-//            layoutIfNeeded()
-//           
-//            let size = contentView.systemLayoutSizeFitting(layoutAttributes.size)
-//           
-//            var frame = layoutAttributes.frame
-//            frame.size.height = ceil(size.height)
-//            layoutAttributes.frame = frame
-//           
-//            return layoutAttributes
-//        }
-}
+    }
