@@ -61,7 +61,7 @@ class WeatherService {
                     self?.error.send(error)
                 },
                 receiveValue: { [weak self] in
-                    self?.weatherData.send($0, location)
+                    self?.weatherData.send(($0, location))
                 }
             )
     }
