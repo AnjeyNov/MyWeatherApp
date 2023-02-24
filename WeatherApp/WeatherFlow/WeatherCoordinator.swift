@@ -37,7 +37,7 @@ class WeatherCoordinator: CoordinatorDependable {
             .weatherData
             .receive(on: DispatchQueue.main)
             .sink { [unowned self] in
-                print($0)
+                showWeather($0.0, location: $0.1)
             }
             .store(in: &cancellables)
     }
@@ -51,6 +51,13 @@ class WeatherCoordinator: CoordinatorDependable {
             animated: true
         )
         launcher.root = navigationController
+    }
+    
+    private func showWeather(_ weatherData: WeatherData, location: Location) {
+        navigationController.setViewControllers(
+            [WeatherViewController(viewModel: WeatherViewModel(location: location,weatherData: weatherData))],
+            animated: true
+        )
     }
 
     private func presentAlert() {
