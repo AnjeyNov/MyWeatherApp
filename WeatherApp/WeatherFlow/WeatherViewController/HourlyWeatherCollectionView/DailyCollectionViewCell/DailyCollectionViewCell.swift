@@ -30,9 +30,15 @@ class DailyCollectionViewCell: UICollectionViewCell {
     }
 
     func update(dailyWeather: DailyWeather) {
-        maxTemperatureLabel.text = "\(dailyWeather.maxTemperature)°"
-        minTemperatureLabel.text = "\(dailyWeather.minTemperature)°"
+        maxTemperatureLabel.text = .fromTemperature(dailyWeather.maxTemperature)
+        minTemperatureLabel.text = .fromTemperature(dailyWeather.minTemperature)
         dayLabel.text = dailyWeather.dayOfWeek
         weatherImageView.image = dailyWeather.weathercode.largeImage
     }
+}
+
+fileprivate extension String {
+    static func fromTemperature(_ temperature: Double) -> String {
+        String(format: "%.0f°", temperature)
     }
+}

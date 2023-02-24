@@ -35,7 +35,7 @@ class WeatherViewController: UIViewController {
         weatherLabel.text = viewModel.currentWeather.weathercode.text
         weatherLabel.font = UIFont(name: "Roboto-Regular", size: 13)
 
-        temperatureLabel.text = "\(viewModel.currentWeather.temperature)°"
+        temperatureLabel.text = .fromTemperature(viewModel.currentWeather.temperature)
         temperatureLabel.font = UIFont(name: "Roboto-Bold", size: 40)
         
         weatherImage.image = viewModel.currentWeather.weathercode.largeImage
@@ -105,4 +105,7 @@ extension WeatherViewController: UICollectionViewDataSource, UICollectionViewDel
 fileprivate extension String {
     static var hourlyCellIdentifier: String { "HourlyCollectionViewCell" }
     static var dailyCellIdentifier: String { "DailyCollectionViewCell" }
+    static func fromTemperature(_ temperature: Double) -> String {
+        String(format: "%.0f°", temperature)
+    }
 }

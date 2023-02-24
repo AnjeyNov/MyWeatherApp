@@ -28,7 +28,13 @@ class HourlyCollectionViewCell: UICollectionViewCell {
 
     func update(hourlyWeather: HourlyWeather) {
         timeLabel.text = hourlyWeather.time
-        temperatureLabel.text = "\(hourlyWeather.temperature)°"
+        temperatureLabel.text = .fromTemperature(hourlyWeather.temperature)
         weatherImageView.image = hourlyWeather.weathercode.largeImage
+    }
+}
+
+fileprivate extension String {
+    static func fromTemperature(_ temperature: Double) -> String {
+        String(format: "%.0f°", temperature)
     }
 }

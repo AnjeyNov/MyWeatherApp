@@ -150,7 +150,6 @@
 				C4180A5529A6736800515200 /* LaunchScreen.storyboard */,
 				C4180A5829A6736800515200 /* Info.plist */,
 				C453E71229A68F1000476563 /* WeatherService.swift */,
-				C453E72D29A7F17900476563 /* LocationModel.swift */,
 				C453E72F29A7F93000476563 /* LocationService.swift */,
 				C46E056E29A82DCF0083FD41 /* ServerError.swift */,
 				C46E058129A85E660083FD41 /* GradientView.swift */,
@@ -192,6 +191,7 @@
 		C46E057029A845820083FD41 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C453E72D29A7F17900476563 /* LocationModel.swift */,
 				C453E73129A8105E00476563 /* WeatherData.swift */,
 				C46E057329A845DC0083FD41 /* CurrentWeather.swift */,
 				C46E057129A8459C0083FD41 /* HourlyWeatherDate.swift */,

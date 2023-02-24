@@ -32,11 +32,9 @@ fileprivate class Formatters {
 
     private init() {
         defaultFormatter.dateFormat = "yyyy-MM-dd"
-        defaultFormatter.locale = Locale(identifier: "en_US")
-        defaultFormatter.timeZone = TimeZone.current
-        
-        toDayOfWeekFormatter.dateFormat = "EEEE"
-        toDayOfWeekFormatter.locale = Locale(identifier: "en_US")
-        toDayOfWeekFormatter.timeZone = TimeZone.current
+        defaultFormatter.locale = Locale(identifier: "en_US_POSIX")
+
+        toDayOfWeekFormatter.dateFormat = "E, dd.MM"
+        toDayOfWeekFormatter.locale = Locale(identifier: "en_US_POSIX")
     }
 }
