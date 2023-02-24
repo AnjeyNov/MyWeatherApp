@@ -35,6 +35,7 @@
 		C46E057D29A85C160083FD41 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46E057B29A85C160083FD41 /* WeatherViewController.swift */; };
 		C46E057E29A85C160083FD41 /* WeatherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C46E057C29A85C160083FD41 /* WeatherViewController.xib */; };
 		C46E058029A85C290083FD41 /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46E057F29A85C290083FD41 /* WeatherViewModel.swift */; };
+		C46E058229A85E660083FD41 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46E058129A85E660083FD41 /* GradientView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		C46E057B29A85C160083FD41 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		C46E057C29A85C160083FD41 /* WeatherViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherViewController.xib; sourceTree = "<group>"; };
 		C46E057F29A85C290083FD41 /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
+		C46E058129A85E660083FD41 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				C453E72D29A7F17900476563 /* LocationModel.swift */,
 				C453E72F29A7F93000476563 /* LocationService.swift */,
 				C46E056E29A82DCF0083FD41 /* ServerError.swift */,
+				C46E058129A85E660083FD41 /* GradientView.swift */,
 			);
 			path = WeatherApp;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C453E73029A7F93000476563 /* LocationService.swift in Sources */,
+				C46E058229A85E660083FD41 /* GradientView.swift in Sources */,
 				C453E73229A8105E00476563 /* WeatherData.swift in Sources */,
 				C453E71329A68F1000476563 /* WeatherService.swift in Sources */,
 				C46E058029A85C290083FD41 /* WeatherViewModel.swift in Sources */,
