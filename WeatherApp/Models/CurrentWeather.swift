@@ -10,5 +10,5 @@ import Foundation
 struct CurrentWeather: Decodable {
     let temperature: Double
     let windspeed: Double
-    let weathercode: Int
+    let weathercode: Weathercode
 }

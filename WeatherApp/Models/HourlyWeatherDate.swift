@@ -10,11 +10,13 @@ import Foundation
 struct HourlyWeather {
     let date: Date
     let temperature: Double
+    let weathercode: Weathercode
     
-    init?(date: String, temperature: Double) {
+    init?(date: String, temperature: Double, weathercode: Weathercode) {
         guard let date = Formatters.shared.defaultFormatter.date(from: date) else { return nil }
         self.date = date
         self.temperature = temperature
+        self.weathercode = weathercode
     }
 }
 

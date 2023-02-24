@@ -31,6 +31,7 @@
 		C46E057229A8459C0083FD41 /* HourlyWeatherDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46E057129A8459C0083FD41 /* HourlyWeatherDate.swift */; };
 		C46E057429A845DC0083FD41 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46E057329A845DC0083FD41 /* CurrentWeather.swift */; };
 		C46E057629A846010083FD41 /* DailyWeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46E057529A846010083FD41 /* DailyWeatherData.swift */; };
+		C46E057829A84B580083FD41 /* Weathercode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46E057729A84B580083FD41 /* Weathercode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		C46E057129A8459C0083FD41 /* HourlyWeatherDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyWeatherDate.swift; sourceTree = "<group>"; };
 		C46E057329A845DC0083FD41 /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 		C46E057529A846010083FD41 /* DailyWeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWeatherData.swift; sourceTree = "<group>"; };
+		C46E057729A84B580083FD41 /* Weathercode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weathercode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 				C46E057329A845DC0083FD41 /* CurrentWeather.swift */,
 				C46E057129A8459C0083FD41 /* HourlyWeatherDate.swift */,
 				C46E057529A846010083FD41 /* DailyWeatherData.swift */,
+				C46E057729A84B580083FD41 /* Weathercode.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				C46E057429A845DC0083FD41 /* CurrentWeather.swift in Sources */,
 				C453E72229A7D2A900476563 /* CoordinatorDependable.swift in Sources */,
 				C453E71929A767F000476563 /* SecondTutorialScreenViewController.swift in Sources */,
+				C46E057829A84B580083FD41 /* Weathercode.swift in Sources */,
 				C453E71E29A7CBE300476563 /* Launcher.swift in Sources */,
 				C453E71C29A7682100476563 /* SecondTutorialScreenViewModel.swift in Sources */,
 				C46E056F29A82DCF0083FD41 /* ServerError.swift in Sources */,
