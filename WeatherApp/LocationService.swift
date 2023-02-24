@@ -12,14 +12,13 @@ class LocationService: NSObject {
     static let shared = LocationService()
 
     lazy private (set) var authorizationStatus = CurrentValueSubject<CLAuthorizationStatus, Never>(locationManager.authorizationStatus)
-    let currentLocation = CurrentValueSubject<Location?, Never>(nil)
+    let currentLocation = PassthroughSubject<Location, Never>()
 
     private let locationManager = CLLocationManager()
     
     private override init() {
         super.init()
         locationManager.delegate = self
-    
     }
 
     private func geocodeLocation(with latitude: CLLocationDegrees, and longitude: CLLocationDegrees) {
@@ -29,7 +28,7 @@ class LocationService: NSObject {
                 guard let self = self, error == nil else { return }
 
                 if let placemarks = placemarks, let placemark = placemarks.first, let city = placemark.locality {
-                    self.currentLocation.value = Location(city: city, latitude: latitude, longitude: longitude)
+                    self.currentLocation.send(Location(city: city, latitude: latitude, longitude: longitude))
                     self.locationManager.stopUpdatingLocation()
                 } else {
                     print("No Matching Address Found")
