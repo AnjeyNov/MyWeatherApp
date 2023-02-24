@@ -30,7 +30,7 @@
 		C46E056F29A82DCF0083FD41 /* ServerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46E056E29A82DCF0083FD41 /* ServerError.swift */; };
 		C46E057229A8459C0083FD41 /* HourlyWeatherDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46E057129A8459C0083FD41 /* HourlyWeatherDate.swift */; };
 		C46E057429A845DC0083FD41 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46E057329A845DC0083FD41 /* CurrentWeather.swift */; };
-		C46E057629A846010083FD41 /* DailyWeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46E057529A846010083FD41 /* DailyWeatherData.swift */; };
+		C46E057629A846010083FD41 /* DailyWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46E057529A846010083FD41 /* DailyWeather.swift */; };
 		C46E057829A84B580083FD41 /* Weathercode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46E057729A84B580083FD41 /* Weathercode.swift */; };
 		C46E057D29A85C160083FD41 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46E057B29A85C160083FD41 /* WeatherViewController.swift */; };
 		C46E057E29A85C160083FD41 /* WeatherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C46E057C29A85C160083FD41 /* WeatherViewController.xib */; };
@@ -49,6 +49,10 @@
 		C46E05A429A86EE20083FD41 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C46E059829A86EE20083FD41 /* Roboto-ThinItalic.ttf */; };
 		C46E05A529A86EE20083FD41 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C46E059929A86EE20083FD41 /* Roboto-Thin.ttf */; };
 		C4B2CEFF29A8729300E76416 /* UIView+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B2CEFE29A8729300E76416 /* UIView+CornerRadius.swift */; };
+		C4B2CF0B29A8781C00E76416 /* HourlyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B2CF0929A8781C00E76416 /* HourlyCollectionViewCell.swift */; };
+		C4B2CF0C29A8781C00E76416 /* HourlyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4B2CF0A29A8781C00E76416 /* HourlyCollectionViewCell.xib */; };
+		C4B2CF1129A886B600E76416 /* DailyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B2CF0F29A886B600E76416 /* DailyCollectionViewCell.swift */; };
+		C4F2677429A8998E004C21B8 /* DailyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4F2677329A8998E004C21B8 /* DailyCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,7 +81,7 @@
 		C46E056E29A82DCF0083FD41 /* ServerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerError.swift; sourceTree = "<group>"; };
 		C46E057129A8459C0083FD41 /* HourlyWeatherDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyWeatherDate.swift; sourceTree = "<group>"; };
 		C46E057329A845DC0083FD41 /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
-		C46E057529A846010083FD41 /* DailyWeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWeatherData.swift; sourceTree = "<group>"; };
+		C46E057529A846010083FD41 /* DailyWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWeather.swift; sourceTree = "<group>"; };
 		C46E057729A84B580083FD41 /* Weathercode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weathercode.swift; sourceTree = "<group>"; };
 		C46E057B29A85C160083FD41 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		C46E057C29A85C160083FD41 /* WeatherViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherViewController.xib; sourceTree = "<group>"; };
@@ -96,6 +100,10 @@
 		C46E059829A86EE20083FD41 /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
 		C46E059929A86EE20083FD41 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		C4B2CEFE29A8729300E76416 /* UIView+CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+CornerRadius.swift"; sourceTree = "<group>"; };
+		C4B2CF0929A8781C00E76416 /* HourlyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HourlyCollectionViewCell.swift; sourceTree = "<group>"; };
+		C4B2CF0A29A8781C00E76416 /* HourlyCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HourlyCollectionViewCell.xib; sourceTree = "<group>"; };
+		C4B2CF0F29A886B600E76416 /* DailyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyCollectionViewCell.swift; sourceTree = "<group>"; };
+		C4F2677329A8998E004C21B8 /* DailyCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DailyCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,7 +195,7 @@
 				C453E73129A8105E00476563 /* WeatherData.swift */,
 				C46E057329A845DC0083FD41 /* CurrentWeather.swift */,
 				C46E057129A8459C0083FD41 /* HourlyWeatherDate.swift */,
-				C46E057529A846010083FD41 /* DailyWeatherData.swift */,
+				C46E057529A846010083FD41 /* DailyWeather.swift */,
 				C46E057729A84B580083FD41 /* Weathercode.swift */,
 			);
 			path = Models;
@@ -205,6 +213,7 @@
 		C46E057A29A85BF50083FD41 /* WeatherViewController */ = {
 			isa = PBXGroup;
 			children = (
+				C4B2CF0E29A87BBA00E76416 /* HourlyWeatherCollectionView */,
 				C46E057B29A85C160083FD41 /* WeatherViewController.swift */,
 				C46E057C29A85C160083FD41 /* WeatherViewController.xib */,
 				C46E057F29A85C290083FD41 /* WeatherViewModel.swift */,
@@ -229,6 +238,33 @@
 				C46E059829A86EE20083FD41 /* Roboto-ThinItalic.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		C493F2EE29A8994F008639EE /* DailyCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C4B2CF0F29A886B600E76416 /* DailyCollectionViewCell.swift */,
+				C4F2677329A8998E004C21B8 /* DailyCollectionViewCell.xib */,
+			);
+			path = DailyCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		C4B2CF0D29A8782400E76416 /* HourlyWeatherCell */ = {
+			isa = PBXGroup;
+			children = (
+				C4B2CF0929A8781C00E76416 /* HourlyCollectionViewCell.swift */,
+				C4B2CF0A29A8781C00E76416 /* HourlyCollectionViewCell.xib */,
+			);
+			path = HourlyWeatherCell;
+			sourceTree = "<group>";
+		};
+		C4B2CF0E29A87BBA00E76416 /* HourlyWeatherCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				C493F2EE29A8994F008639EE /* DailyCollectionViewCell */,
+				C4B2CF0D29A8782400E76416 /* HourlyWeatherCell */,
+			);
+			path = HourlyWeatherCollectionView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,6 +328,7 @@
 				C46E059F29A86EE20083FD41 /* Roboto-MediumItalic.ttf in Resources */,
 				C46E05A229A86EE20083FD41 /* Roboto-Light.ttf in Resources */,
 				C46E059A29A86EE20083FD41 /* Roboto-Italic.ttf in Resources */,
+				C4B2CF0C29A8781C00E76416 /* HourlyCollectionViewCell.xib in Resources */,
 				C46E059D29A86EE20083FD41 /* Roboto-Black.ttf in Resources */,
 				C46E059C29A86EE20083FD41 /* Roboto-LightItalic.ttf in Resources */,
 				C4180A5729A6736800515200 /* LaunchScreen.storyboard in Resources */,
@@ -302,6 +339,7 @@
 				C46E059B29A86EE20083FD41 /* Roboto-BlackItalic.ttf in Resources */,
 				C46E059E29A86EE20083FD41 /* Roboto-BoldItalic.ttf in Resources */,
 				C46E05A429A86EE20083FD41 /* Roboto-ThinItalic.ttf in Resources */,
+				C4F2677429A8998E004C21B8 /* DailyCollectionViewCell.xib in Resources */,
 				C453E71A29A767F000476563 /* SecondTutorialScreenViewController.xib in Resources */,
 				C46E05A329A86EE20083FD41 /* Roboto-Regular.ttf in Resources */,
 				C46E05A029A86EE20083FD41 /* Roboto-Bold.ttf in Resources */,
@@ -317,11 +355,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4B2CF1129A886B600E76416 /* DailyCollectionViewCell.swift in Sources */,
 				C453E73029A7F93000476563 /* LocationService.swift in Sources */,
 				C46E058229A85E660083FD41 /* GradientView.swift in Sources */,
 				C453E73229A8105E00476563 /* WeatherData.swift in Sources */,
 				C453E71329A68F1000476563 /* WeatherService.swift in Sources */,
 				C46E058029A85C290083FD41 /* WeatherViewModel.swift in Sources */,
+				C4B2CF0B29A8781C00E76416 /* HourlyCollectionViewCell.swift in Sources */,
 				C4180A5F29A675FB00515200 /* AppCoordinator.swift in Sources */,
 				C46E057D29A85C160083FD41 /* WeatherViewController.swift in Sources */,
 				C46E057429A845DC0083FD41 /* CurrentWeather.swift in Sources */,
@@ -332,7 +372,7 @@
 				C453E71C29A7682100476563 /* SecondTutorialScreenViewModel.swift in Sources */,
 				C46E056F29A82DCF0083FD41 /* ServerError.swift in Sources */,
 				C46E057229A8459C0083FD41 /* HourlyWeatherDate.swift in Sources */,
-				C46E057629A846010083FD41 /* DailyWeatherData.swift in Sources */,
+				C46E057629A846010083FD41 /* DailyWeather.swift in Sources */,
 				C4180A4B29A6736600515200 /* AppDelegate.swift in Sources */,
 				C453E72429A7E80800476563 /* WeatherCoordinator.swift in Sources */,
 				C4180A6329A689C600515200 /* FirstTutorialScreenViewController.swift in Sources */,

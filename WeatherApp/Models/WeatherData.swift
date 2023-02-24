@@ -10,7 +10,7 @@ import Foundation
 struct WeatherData: Decodable {
     let currentWeather: CurrentWeather
     let hourlyWeather: [HourlyWeather]
-    let dailyWeather: [DailyWeatherData]
+    let dailyWeather: [DailyWeather]
 
     enum CodingKeys: String, CodingKey {
         case currentWeather = "current_weather"
@@ -69,13 +69,13 @@ fileprivate struct RawDailyWeather: Decodable {
         case weathercodes = "weathercode"
     }
     
-    var dailyWeather: [DailyWeatherData] {
+    var dailyWeather: [DailyWeather] {
         guard dates.count == temperaturesMax.count,
               temperaturesMax.count == temperaturesMin.count,
               temperaturesMin.count == weathercodes.count else { return [] }
 
         return dates.enumerated().compactMap { [temperaturesMin, temperaturesMax, weathercodes] (index, date) in
-            DailyWeatherData(
+            DailyWeather(
                 date: date,
                 maxTemperature: temperaturesMax[index],
                 minTemperature: temperaturesMin[index],

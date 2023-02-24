@@ -15,6 +15,9 @@ class WeatherViewController: UIViewController {
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var weatherImage: UIImageView!
 
+    @IBOutlet weak var hourlyCollectionView: UICollectionView!
+    @IBOutlet weak var dailyCollectionView: UICollectionView!
+
     init(viewModel: WeatherViewModel) {
         self.viewModel = viewModel
         super.init(nibName: "WeatherViewController", bundle: nil)
@@ -36,7 +39,57 @@ class WeatherViewController: UIViewController {
         temperatureLabel.font = UIFont(name: "Roboto-Bold", size: 40)
         
         weatherImage.image = viewModel.currentWeather.weathercode.largeImage
+        
+        hourlyCollectionView.register(
+            UINib(nibName: "HourlyCollectionViewCell",bundle: nil),
+            forCellWithReuseIdentifier: .hourlyCellIdentifier
+        )
+        hourlyCollectionView.dataSource = self
+        hourlyCollectionView.delegate = self
+        hourlyCollectionView.contentInset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
+        
+        dailyCollectionView.register(
+            UINib(nibName: "DailyCollectionViewCell", bundle: nil),
+            forCellWithReuseIdentifier: .dailyCellIdentifier
+        )
+        dailyCollectionView.dataSource = self
+        dailyCollectionView.delegate = self
     }
 
 }
 
+
+extension WeatherViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if collectionView === hourlyCollectionView {
+            return viewModel.hourlyWeather.count
+        } else {
+            return viewModel.dailyWeather.count
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if collectionView === hourlyCollectionView {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .hourlyCellIdentifier, for: indexPath)
+            guard let cell = cell as? HourlyCollectionViewCell else { return cell }
+            cell.prepareForReuse()
+            cell.update(hourlyWeather: viewModel.hourlyWeather[indexPath.row])
+            return cell
+        } else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .dailyCellIdentifier, for: indexPath)
+            guard let cell = cell as? DailyCollectionViewCell else { return cell }
+            cell.prepareForReuse()
+            cell.update(dailyWeather: viewModel.dailyWeather[indexPath.row])
+            return cell
+        }
+    }
+}
+
+fileprivate extension String {
+    static var hourlyCellIdentifier: String { "HourlyCollectionViewCell" }
+    static var dailyCellIdentifier: String { "DailyCollectionViewCell" }
+}

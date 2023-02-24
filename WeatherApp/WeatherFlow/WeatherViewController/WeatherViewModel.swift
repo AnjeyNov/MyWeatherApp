@@ -12,6 +12,8 @@ struct WeatherViewModel {
     private let weatherData: WeatherData
     
     var currentWeather: CurrentWeather { weatherData.currentWeather }
+    var hourlyWeather: [HourlyWeather] { weatherData.hourlyWeather }
+    var dailyWeather: [DailyWeather] { weatherData.dailyWeather }
     
     init(location: Location, weatherData: WeatherData) {
         self.location = location
