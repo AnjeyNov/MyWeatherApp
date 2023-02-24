@@ -21,13 +21,19 @@ class GradientView: UIView {
         }
     }
     
-    @IBInspectable var startPoint = CGPoint(x: 0.0, y: 0.5) {
+    @IBInspectable var startPoint: CGPoint = CGPoint(x: 0.0, y: 0.5) {
         didSet {
             updateView()
         }
     }
     
-    @IBInspectable var endPoint = CGPoint(x: 1.0, y: 0.5) {
+    @IBInspectable var endPoint: CGPoint = CGPoint(x: 1.0, y: 0.5) {
+        didSet {
+            updateView()
+        }
+    }
+    
+    @IBInspectable var locations: [NSNumber] = [0, 1] {
         didSet {
             updateView()
         }
@@ -42,7 +48,9 @@ class GradientView: UIView {
     func updateView() {
         let layer = self.layer as! CAGradientLayer
         layer.colors = [firstColor, secondColor].map{ $0.cgColor }
-        layer.startPoint = CGPoint(x: 0, y: 0.5)
-        layer.endPoint = CGPoint (x: 1, y: 0.5)
+        layer.locations = locations
+        layer.startPoint = startPoint
+        layer.endPoint = endPoint
+//        layer.transform = CATransform3DMakeAffineTransform(CGAffineTransform(a: 0, b: 1, c: -1, d: 0, tx: 1, ty: 0))
     }
 }

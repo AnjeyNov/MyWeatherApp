@@ -72,62 +72,62 @@ enum Weathercode: Int, Decodable {
 //85, 86 Снежные ливни слабой и сильной интенсивности
 
 extension Weathercode {
-    var decription: String {
+    var text: String {
         switch self {
         case .clearSky:
             return "Clear Sky"
 
         case .mainlyClear:
-            return "Clear Sky"
+            return "Mainly Clear"
     
         case .partlyCloudy:
-            return "Clear Sky"
+            return "Partly Cloudy"
         case .overcast:
-            return "Clear Sky"
+            return "Overcast"
         case .fog:
-            return "Clear Sky"
+            return "Fog"
         case .depositingRimeFog:
-            return "Clear Sky"
+            return "Depositing Rime Fog"
         case .drizzleLight:
-            return "Clear Sky"
+            return "Drizzle Light"
         case .drizzleModerate:
-            return "Clear Sky"
+            return "Drizzle Moderate"
         case .drizzleDenseIntensity:
-            return "Clear Sky"
+            return "Drizzle Dense Intensity"
         case .freezingDrizzleLight:
-            return "Clear Sky"
+            return "Freezing Drizzle Light"
         case .freezingDrizzleDenseIntensity:
-            return "Clear Sky"
+            return "Freezing Drizzle Dense Intensity"
         case .rainSlight:
-            return "Clear Sky"
+            return "Rain Slight"
         case .rainModerate:
-            return "Clear Sky"
+            return "Rain Moderate"
         case .rainHeavyIntensity:
-            return "Clear Sky"
+            return "Rain Heavy Intensity"
         case .freezingRainLight:
-            return "Clear Sky"
+            return "Freezing Rain Light"
         case .freezingRainHeavyIntensity:
-            return "Clear Sky"
+            return "Freezing Rain Heavy Intensity"
         case .snowFallSlight:
-            return "Clear Sky"
+            return "Snow Fall Slight"
         case .snowFallModerate:
-            return "Clear Sky"
+            return "Snow Fall Moderate"
         case .snowFallHeavyIntensity:
-            return "Clear Sky"
+            return "Snow Fall Heavy Intensity"
         case .snowGrains:
-            return "Clear Sky"
+            return "Snow Grains"
         case .rainShowersSlight:
-            return "Clear Sky"
+            return "Rain Showers Slight"
         case .rainShowersModerate:
-            return "Clear Sky"
+            return "Rain Showers Moderate"
         case .rainShowersViolent:
-            return "Clear Sky"
+            return "Rain Showers Violent"
         case .snowShowersSlight:
-            return "Clear Sky"
+            return "Snow Showers Slight"
         case .snowShowersHeavy:
-            return "Clear Sky"
+            return "Snow Showers Heavy"
         case .notAvailable:
-            return "Clear Sky"
+            return "Not Available"
         }
     }
     
